@@ -1,0 +1,171 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZealousMind</title>
+    <style>
+        body {
+            background-image: url("{% static '/diabetesPridiction/images/bg4.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            color: white;
+            padding: 1px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+            flex: 1; /* Allow main to grow and take available space */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
+            gap: 20px; /* Space between the grid items */
+        }
+
+        p {
+            color: #333; /* Darker color for better visibility */
+            font-size: 18px; /* Increased font size for emphasis */
+            margin: 0; /* Remove default margin */
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: left;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%; /* Make button full width */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Welcome to ZealousMind</h1>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="container">
+            <h3>Diabetes Prediction</h3>
+            <div class="explanation">
+                <p>This tool helps in predicting diabetes based on specific health measurements. </p>
+            </div>
+            <form action="{% url 'diabetes' %}">
+                <input type="submit" value="Test Modal">
+            </form>
+        </div>
+
+        <div class="container">
+            <h3>Rock vs Mine Prediction</h3>
+            <div class="explanation">
+                <p>This tool helps in predicting rock vs mine classification based on specific features. </p>
+            </div>
+            <form action="{% url 'mine' %}">
+                <input type="submit" value="Test Modal">
+            </form>
+        </div>
+
+        <div class="container">
+            <h3>Text Classifier</h3>
+            <div class="explanation">
+                <p>This tool predicts house prices based on various factors.</p>
+            </div>
+            <form action="{% url 'textclassifier' %}">
+                <input type="submit" value="Test Modal">
+            </form>
+        </div>
+        <div class="container">
+            <h3>House Price Prediction</h3>
+            <div class="explanation">
+                <p>This tool predicts house prices based on various factors.</p>
+            </div>
+            <form action="{% url 'diabetes' %}">
+                <input type="submit" value="Test Modal">
+            </form>
+        </div>
+        <div class="container">
+            <h3>House Price Prediction</h3>
+            <div class="explanation">
+                <p>This tool predicts house prices based on various factors.</p>
+            </div>
+            <form action="{% url 'diabetes' %}">
+                <input type="submit" value="Test Modal">
+            </form>
+        </div>
+        <div class="container">
+            <h3>House Price Prediction</h3>
+            <div class="explanation">
+                <p>This tool predicts house prices based on various factors.</p>
+            </div>
+            <form action="{% url 'diabetes' %}">
+                <input type="submit" value="Test Modal">
+            </form>
+        </div>
+        <div class="container">
+            <h3>House Price Prediction</h3>
+            <div class="explanation">
+                <p>This tool predicts house prices based on various factors.</p>
+            </div>
+            <form action="{% url 'diabetes' %}">
+                <input type="submit" value="Test Modal">
+            </form>
+        </div>
+
+        <!-- Add more containers here for additional projects -->
+    </main>
+
+    <footer>
+        <h2>&copy; 2024 ZealousMind. All rights reserved.</h2>
+    </footer>
+</body>
+</html>

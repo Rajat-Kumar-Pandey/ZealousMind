@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <style>
+        body {
+            background-image: url("{% static '/diabetesPridiction/images/dbg2.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 32px;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 0;
+        }
+
+        .main {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            margin: 50px auto;
+            width: 600px; /* Increased width for 2-column layout */
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            grid-gap: 20px; /* Space between fields */
+        }
+
+        .form-grid div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .form-grid label {
+            font-weight: bold;
+            color: #333;
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .form-grid input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            width: 100%; /* Full-width submit button */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            margin-top: 20px;
+            text-align: center;
+            color: #333;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Diabetes Prediction Modal</h1>
+
+    <div class="main">
+        <h2>Please Enter the Following Details</h2>
+        <form action="result">
+            <div class="form-grid">
+                <div>
+                    <label for="n1">Pregnancies:</label>
+                    <input type="text" id="n1" name="n1" required>
+                </div>
+                <div>
+                    <label for="n2">Glucose:</label>
+                    <input type="text" id="n2" name="n2" required>
+                </div>
+
+                <div>
+                    <label for="n3">Blood Pressure:</label>
+                    <input type="text" id="n3" name="n3" required>
+                </div>
+                <div>
+                    <label for="n4">Skin Thickness:</label>
+                    <input type="text" id="n4" name="n4" required>
+                </div>
+
+                <div>
+                    <label for="n5">Insulin:</label>
+                    <input type="text" id="n5" name="n5" required>
+                </div>
+                <div>
+                    <label for="n6">BMI:</label>
+                    <input type="text" id="n6" name="n6" required>
+                </div>
+
+                <div>
+                    <label for="n7">Diabetes Pedigree Function:</label>
+                    <input type="text" id="n7" name="n7" required>
+                </div>
+                <div>
+                    <label for="n8">Age:</label>
+                    <input type="text" id="n8" name="n8" required>
+                </div>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+        
+        <div class="result">
+            Result: {{result}}
+        </div>
+    </div>
+</body>
+</html>
